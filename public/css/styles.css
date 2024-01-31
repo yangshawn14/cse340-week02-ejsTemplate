@@ -21,8 +21,29 @@ h1, h2 {
   
 }
 
+a {
+  text-decoration: none;
+  color: aqua;
+}
 
+a:hover {
+  color: lightcoral;
+}
+
+.siteName a {
+  font-size: 2em;
+}
+
+#top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .cta li, #upgrades li {
   list-style-type: none;
+}
+
+#delorean-img {
+  width: 100%;
 }
