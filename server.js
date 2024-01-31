@@ -12,20 +12,20 @@ const app = express()
 const static = require("./routes/static")
 
 /* ***********************
+ * View Engine and Templates
+ *************************/
+app.use(expressLayouts)
+app.set("layout", "./layouts/layout")
+app.set("view engine", "ejs")
+
+/* ***********************
  * Routes
  *************************/
 app.use(static)
 // Index route
 app.get("/", (req, res) => {
-  res.render("index", {title: "Home"})
+  res.render("index", { title: "Home" })
 })
-
-/* ***********************
- * View Engine and Templates
- *************************/
-app.set("view engine", "ejs")
-app.use(expressLayouts)
-app.set("layout", "./layouts/layout")
 
 /* ***********************
  * Local Server Information
