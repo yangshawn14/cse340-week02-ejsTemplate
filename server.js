@@ -12,6 +12,13 @@ const app = express()
 const static = require("./routes/static")
 
 /* ***********************
+ * Static Files
+ *************************/
+app.use(express.static("public"))
+app.use("/css", express.static(__dirname + "public/css"))
+app.use("/images", express.static(__dirname + "public/images"))
+
+/* ***********************
  * View Engine and Templates
  *************************/
 app.use(expressLayouts)
