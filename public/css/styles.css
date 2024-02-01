@@ -23,7 +23,7 @@ h1, h2 {
 
 a {
   text-decoration: none;
-  color: aqua;
+  color: red;
 }
 
 a:hover {
@@ -40,17 +40,10 @@ a:hover {
   align-items: center;
 }
 
-.cta li, #upgrades li {
-  list-style-type: none;
-}
-
-#delorean-img {
-  width: 100%;
-}
-
 nav {
   width: 100%;
   background-color: #f0f0f0;
+  margin-top: 20px;
 }
 
 nav ul {
@@ -60,3 +53,41 @@ nav ul {
   padding: 15px;
   margin: 0;
 }
+
+.cta li, #upgrades li {
+  list-style-type: none;
+}
+
+.container {
+  position: relative;
+  color: white;
+}
+
+#delorean-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cta {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(128, 128, 128, 0.5);
+  color: #2c3e50;
+}
+
+.cta h2 {
+  margin-bottom: 2px;
+}
+
+.cta ul {
+  padding: 0;
+  margin: 0;
+}
+
+.cta a {
+  background-color: yellow;
+}
+
