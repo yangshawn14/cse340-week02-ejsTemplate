@@ -31,9 +31,7 @@ app.set("view engine", "ejs")
  *************************/
 app.use(static)
 // Index route
-app.get("/", (req, res) => {
-  res.render("index", { title: "Home" })
-})
+app.get("/", baseController.buildHome)
 
 /* ***********************
  * Local Server Information
