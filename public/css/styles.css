@@ -27,6 +27,11 @@ h2 {
 #tools a {
   font-weight: bold;
   color: #f0f0f0;
+  transition: font-size 0.2s ease-in-out;
+}
+
+#tools a:hover {
+  font-size: calc(20px + 20%);
 }
 
 a {
@@ -41,6 +46,11 @@ a:hover {
 .siteName a {
   font-size: 2em;
   color: #f0f0f0;
+  transition: font-size 0.2s ease-in-out;
+}
+
+.siteName a:hover {
+  font-size: calc(2em + 20%);
 }
 
 #top-header {
