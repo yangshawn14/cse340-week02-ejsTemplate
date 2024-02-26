@@ -223,6 +223,16 @@ nav ul li:hover {
   color: orange;
 }
 
+/************Vehicle Detail Page*************/
+.vehicle-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.vehicle-detail img {
+  width: 100%;
+}
+
 /* Media Query */
 @media screen and (min-width: 768px) {
 
@@ -313,4 +323,24 @@ nav ul li:hover {
     font-size: 20px;
   }
 
+  /************Vehicle Detail Page*************/
+  .vehicle-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  .vehicle-detail h2 {
+    grid-column: 2/3;
+    margin-top: 0;
+  }
+
+  .vehicle-detail img {
+    grid-column: 1/2;
+    grid-row: 1/6;
+  }
+
+  .vehicle-detail p {
+    grid-column: 2/3;
+  }
 }
