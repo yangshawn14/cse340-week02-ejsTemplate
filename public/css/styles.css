@@ -233,6 +233,75 @@ nav ul li:hover {
   width: 100%;
 }
 
+/*----------- Login Page ------------------*/
+form {
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 350px;
+}
+
+form input:required {
+  border-left: red solid 6px;
+}
+
+form input:required:valid {
+  border-left: green solid 6px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="password"],
+input[type="email"] {
+  display: block;
+  width: 100%;
+  max-width: 19rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-left: 225px;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+#no-account-msg {
+  text-align: center;
+}
+
+#sign-up {
+  color: #f0f0f0;
+}
+
+#sign-up:hover {
+  color: purple;
+}
+
 /* Media Query */
 @media screen and (min-width: 768px) {
 
