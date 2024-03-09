@@ -24,6 +24,20 @@ app.use("/css", express.static(__dirname + "public/css"))
 app.use("/images", express.static(__dirname + "public/images"))
 
 /* ***********************
+ * Middleware
+ * ************************/
+app.use(session({
+  store: new (require('connect-pg-simple')(session))({
+    createTableIfMissing: true,
+    pool,
+  }),
+  secret: process.env.SESSION_SECRET,
+  resave: true,
+  saveUninitialized: true,
+  name: 'sessionId',
+}))
+
+/* ***********************
  * View Engine and Templates
  *************************/
 app.use(expressLayouts)
