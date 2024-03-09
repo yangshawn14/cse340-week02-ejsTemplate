@@ -15,6 +15,7 @@ const inventoryRoute = require("./routes/inventoryRoute")
 const utilities = require("./utilities/")
 const session = require("express-session")
 const pool = require("./database/")
+const accountRoute = require("./routes/accountRoute")
 
 /* ***********************
  * Static Files
@@ -58,6 +59,8 @@ app.use(static)
 app.get("/", utilities.handleErrors(baseController.buildHome))
 // Inventory routes
 app.use("/inv", utilities.handleErrors(inventoryRoute))
+// Account route
+app.use("/account", utilities.handleErrors(accountRoute))
 // File Not Found Route - must be last route in list
 app.use(async (req, res, next) => {
   next({ status: 404, message: "Sorry, even Moses couldn't part the digital sea to find this page." })
