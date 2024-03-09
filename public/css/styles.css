@@ -233,7 +233,7 @@ nav ul li:hover {
   width: 100%;
 }
 
-/*----------- Login Page ------------------*/
+/*----------- Login and Register Page ------------------*/
 form {
   background-color: #eee;
   padding: 20px;
@@ -262,7 +262,8 @@ label {
 }
 
 input[type="password"],
-input[type="email"] {
+input[type="email"],
+input[type="text"] {
   display: block;
   width: 100%;
   max-width: 19rem;
@@ -301,6 +302,17 @@ button[type="submit"]:hover {
 #sign-up:hover {
   color: purple;
 }
+
+/*--- Register Page ---*/
+#pswBtn {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+#register-btn {
+  margin-left: 205px;
+}
+
 
 /* Media Query */
 @media screen and (min-width: 768px) {
