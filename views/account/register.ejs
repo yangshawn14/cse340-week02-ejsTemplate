@@ -10,6 +10,7 @@
 
             <!-- Registration form -->
             <form action="/register" method="POST">
+                <p>All fields are required.</p>
                 <label for="firstName">First Name:</label>
                 <input type="text" id="firstName" name="firstName" required>
 
@@ -22,6 +23,10 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
                 <span id="pswBtn">Show Password</span>
+                <p>
+                    Password must have at least 12 characters, contain at least 1
+                    capital letter, contain at least 1 number, and contain at least 1 special character.
+                </p>
 
                 <button type="submit" id="register-btn">Register</button>
             </form>
