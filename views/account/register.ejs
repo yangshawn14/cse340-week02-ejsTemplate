@@ -6,22 +6,23 @@
     <% } else { res.redirect('/') } %>
 
         <!-- Message -->
-        <% messages() %>
+        <%- messages() %>
 
             <!-- Registration form -->
-            <form action="account/register" method="POST">
+            <form action="/account/register" method="POST">
                 <p>All fields are required.</p>
                 <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required>
+                <input type="text" id="firstName" name="account_firstname" required>
 
                 <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" required>
+                <input type="text" id="lastName" name="account_lastname" required>
 
                 <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="account_email" required placeholder="Enter a valid email address.">
 
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="account_password" required
+                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$">
                 <span id="pswBtn">Show Password</span>
                 <p>
                     Password must have at least 12 characters, contain at least 1

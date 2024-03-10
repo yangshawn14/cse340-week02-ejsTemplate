@@ -234,6 +234,11 @@ nav ul li:hover {
 }
 
 /*----------- Login and Register Page ------------------*/
+.notice li {
+  list-style-type: none;
+  color: #eee;
+}
+
 form {
   background-color: #eee;
   padding: 20px;

@@ -6,10 +6,10 @@
     <% } else { res.redirect('/') } %>
 
         <!-- Message -->
-        <% messages() %>
+        <%- messages() %>
 
             <!-- Login form -->
-            <form action="account/login" method="post">
+            <form action="/account/login" method="post">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
                 <label for="password">Password:</label>
