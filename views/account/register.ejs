@@ -6,30 +6,39 @@
     <% } else { res.redirect('/') } %>
 
         <!-- Message -->
-        <%- messages() %>
+        <% if (errors) { %>
+            <ul class="notice">
+                <% errors.array().forEach(error=> { %>
+                    <li>
+                        <%= error.msg %>
+                    </li>
+                    <% }) %>
+            </ul>
+            <% } %>
 
-            <!-- Registration form -->
-            <form action="/account/register" method="POST">
-                <p>All fields are required.</p>
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="account_firstname" required>
+                <!-- Registration form -->
+                <form action="/account/register" method="POST">
+                    <p>All fields are required.</p>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="account_firstname" required>
 
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="account_lastname" required>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="account_lastname" required>
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="account_email" required placeholder="Enter a valid email address.">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="account_email" required
+                        placeholder="Enter a valid email address.">
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="account_password" required
-                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$">
-                <span id="pswBtn">Show Password</span>
-                <p>
-                    Password must have at least 12 characters, contain at least 1
-                    capital letter, contain at least 1 number, and contain at least 1 special character.
-                </p>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="account_password" required
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$">
+                    <span id="pswBtn">Show Password</span>
+                    <p>
+                        Password must have at least 12 characters, contain at least 1
+                        capital letter, contain at least 1 number, and contain at least 1 special character.
+                    </p>
 
-                <button type="submit" id="register-btn">Register</button>
-            </form>
+                    <button type="submit" id="register-btn">Register</button>
+                </form>
 
-            <script src="/js/script.js"></script>
+                <script src="/js/script.js"></script>
