@@ -12,5 +12,11 @@ router.get("/detail/:invId", invController.displayVehicleDetail)
 // Route to managing inventory
 router.get("/", invController.buildManagement)
 
+// Route to build add-classification page
+router.get("/add-classification", invController.buildAddClassification)
+
+// Route to add new classification
+router.post("/add-classification", invController.addClassification)
+
 module.exports = router;
 

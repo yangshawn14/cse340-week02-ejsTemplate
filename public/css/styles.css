@@ -326,6 +326,11 @@ button[type="submit"]:hover {
   margin-left: 5rem;
 }
 
+/*---------- Add Classification Page -------------*/
+#classification-btn {
+  margin: 5px auto;
+}
+
 /* Media Query */
 @media screen and (min-width: 768px) {
 
