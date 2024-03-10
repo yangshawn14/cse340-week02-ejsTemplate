@@ -34,5 +34,16 @@ invCont.displayVehicleDetail = async function (req, res, next) {
     });
 };
 
+/* ***************************
+ *  Build Management view 
+ * ************************** */
+invCont.buildManagement = async function (req, res) {
+    let nav = await utilities.getNav()
+    res.render("./inventory/management", {
+        title: "Vehicle Management",
+        nav,
+        errors: null,
+    })
+}
 
 module.exports = invCont

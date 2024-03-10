@@ -318,6 +318,13 @@ button[type="submit"]:hover {
   margin-left: 205px;
 }
 
+/*------- Management Page ---------*/
+.management-link {
+  color: #f0f0f0;
+  display: block;
+  margin: 1rem;
+  margin-left: 5rem;
+}
 
 /* Media Query */
 @media screen and (min-width: 768px) {
