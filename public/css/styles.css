@@ -268,7 +268,9 @@ label {
 
 input[type="password"],
 input[type="email"],
-input[type="text"] {
+input[type="text"],
+textarea,
+select {
   display: block;
   width: 100%;
   max-width: 19rem;
@@ -329,6 +331,15 @@ button[type="submit"]:hover {
 /*---------- Add Classification Page -------------*/
 #classification-btn {
   margin: 5px auto;
+}
+
+/*---------- Add Inventory Page ------------*/
+.form-group {
+  margin-bottom: 20px;
+}
+
+#inventory-btn {
+  margin-left: 180px;
 }
 
 /* Media Query */

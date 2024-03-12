@@ -5,16 +5,8 @@
     <% } else { res.redirect('/') } %>
 
         <!-- Message -->
-        <% if (errors) { %>
-            <ul class="notice">
-                <% errors.array().forEach(error=> { %>
-                    <li>
-                        <%= error.msg %>
-                    </li>
-                    <% }) %>
-            </ul>
-            <% } %>
+        <%- messages() %>
 
-                <!-- Links -->
-                <a class="management-link" href="/inv/add-classification">Add New Classification</a>
-                <a class="management-link" href="/inv/add-vehicle">Add New Vehicle</a>
+            <!-- Links -->
+            <a class="management-link" href="/inv/add-classification">Add New Classification</a>
+            <a class="management-link" href="/inv/add-inventory">Add New Vehicle</a>
